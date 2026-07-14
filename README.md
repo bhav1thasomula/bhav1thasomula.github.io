@@ -1,6 +1,6 @@
 # Maanasa Somula
 
-Personal website featuring essays on the counterintuitive ideas of mathematics and physics.
+Personal website exploring the counterintuitive ideas of mathematics, physics, and computer science.
 
 ## First article
-- "My Infinity Is Greater Than Yours" How Georg Cantor Changed Mathematics Forever.
+- My Infinity Is Greater Than Yours: How Georg Cantor Changed Mathematics Forever.
