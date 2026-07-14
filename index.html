@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,149 +11,323 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
 
-    background:#0F172A;
-    color:#F8FAFC;
+font-family:Inter,sans-serif;
 
-    font-family:Inter,sans-serif;
+background:
+radial-gradient(circle at top right,
+rgba(244,114,182,.10),
+transparent 35%),
+linear-gradient(#190E1F,#120A17);
 
-    max-width:900px;
-    margin:auto;
+color:#FFF8FC;
 
-    padding:70px 30px;
+max-width:1100px;
+
+margin:auto;
+
+padding:70px 35px;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+}
+
+/* Navigation */
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:90px;
+
+}
+
+.logo{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:34px;
+
+font-weight:700;
+
+color:#F9A8D4;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:38px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#E8D7E5;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#F9A8D4;
+
+}
+
+/* Hero */
+
+.hero{
+
+position:relative;
+
+margin-bottom:90px;
+
 }
 
 h1{
 
-    font-family:"Cormorant Garamond",serif;
-    font-size:70px;
-    font-weight:700;
+font-family:"Cormorant Garamond",serif;
+
+font-size:84px;
+
+font-weight:700;
+
+line-height:1;
 
 }
 
 .tagline{
 
-    color:#94A3B8;
-    font-size:20px;
+margin-top:18px;
 
-    margin-top:10px;
-    margin-bottom:60px;
-}
+font-size:24px;
 
-hr{
+font-style:italic;
 
-    border:none;
-    border-top:1px solid #334155;
-    margin:40px 0;
+color:#E9C5E8;
 
 }
 
-h2{
+.description{
 
-    font-family:"Cormorant Garamond",serif;
-    font-size:40px;
-    margin-bottom:20px;
+margin-top:24px;
 
-}
+max-width:720px;
 
-.article{
+line-height:1.9;
 
-    background:#172554;
+font-size:18px;
 
-    border-radius:18px;
-
-    padding:30px;
-
-    transition:.3s;
+color:#D8C6D5;
 
 }
 
-.article:hover{
+/* Infinity */
 
-    transform:translateY(-6px);
+.infinity{
+
+position:absolute;
+
+right:-70px;
+
+top:-80px;
+
+font-size:280px;
+
+color:#F472B6;
+
+opacity:.08;
+
+user-select:none;
+
+filter:blur(1px);
+
+}
+
+/* Section */
+
+.section-title{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:48px;
+
+margin-bottom:30px;
 
 }
 
-.article h3{
+/* Card */
 
-    font-family:"Cormorant Garamond",serif;
+.card{
 
-    font-size:34px;
+background:rgba(94,45,102,.38);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:42px;
+
+border-radius:30px;
+
+transition:.35s;
+
+box-shadow:0 20px 60px rgba(0,0,0,.28);
 
 }
 
-.article p{
+.card:hover{
 
-    color:#CBD5E1;
+transform:translateY(-8px);
 
-    margin-top:12px;
-
-    line-height:1.8;
+box-shadow:0 30px 80px rgba(244,114,182,.15);
 
 }
+
+.card small{
+
+color:#F9A8D4;
+
+letter-spacing:.6px;
+
+font-weight:600;
+
+}
+
+.card h2{
+
+margin-top:15px;
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:50px;
+
+line-height:1.1;
+
+}
+
+.card p{
+
+margin-top:18px;
+
+font-size:19px;
+
+line-height:1.8;
+
+color:#E7D8E6;
+
+max-width:720px;
+
+}
+
+/* Button */
 
 .button{
 
-    display:inline-block;
+display:inline-block;
 
-    margin-top:25px;
+margin-top:30px;
 
-    text-decoration:none;
+padding:14px 28px;
 
-    background:#7DD3FC;
+background:#F472B6;
 
-    color:#0F172A;
+color:white;
 
-    padding:12px 24px;
+border-radius:16px;
 
-    border-radius:12px;
+text-decoration:none;
 
-    font-weight:bold;
+font-weight:600;
+
+transition:.3s;
 
 }
 
 .button:hover{
 
-    background:white;
+background:#EC4899;
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 30px rgba(244,114,182,.4);
 
 }
 
+/* Footer */
+
 footer{
 
-    margin-top:80px;
+margin-top:100px;
 
-    color:#64748B;
+padding-top:35px;
 
-    text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+
+text-align:center;
+
+color:#C7AFC4;
+
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav ul{
+
+gap:20px;
+
+}
+
+h1{
+
+font-size:56px;
 
 }
 
 .infinity{
 
-    position:fixed;
+display:none;
 
-    top:-60px;
+}
 
-    right:20px;
+.card h2{
 
-    font-size:250px;
+font-size:38px;
 
-    opacity:.05;
-
-    font-family:serif;
-
-    user-select:none;
+}
 
 }
 
@@ -162,13 +337,39 @@ footer{
 
 <body>
 
+<nav>
+
+<div class="logo">
+
+∞
+
+</div>
+
+<ul>
+
+<li><a href="#">Articles</a></li>
+
+<li><a href="#">Projects</a></li>
+
+<li><a href="#">About</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
 <div class="infinity">
 
 ∞
 
 </div>
 
-<h1>Bhavitha Somula</h1>
+<h1>
+
+Bhavitha Somula
+
+</h1>
 
 <p class="tagline">
 
@@ -176,17 +377,33 @@ Where intuition meets infinity.
 
 </p>
 
-<hr>
+<p class="description">
 
-<h2>Latest Essay</h2>
+Exploring the beautiful, counterintuitive ideas of mathematics, physics, and computer science through long-form essays and original projects.
 
-<div class="article">
+</p>
 
-<h3>
+</section>
 
- My Infinity Is Greater Than Yours
+<h2 class="section-title">
 
-</h3>
+Latest Essay
+
+</h2>
+
+<div class="card">
+
+<small>
+
+MATHEMATICS · 12 MIN READ
+
+</small>
+
+<h2>
+
+Infinity Is Greater Than Yours
+
+</h2>
 
 <p>
 
@@ -194,9 +411,9 @@ How Georg Cantor discovered that not all infinities are equal—and forever chan
 
 </p>
 
-<a href="#" class="button">
+<a class="button" href="infinity-is-greater-than-yours.html">
 
-Read Article →
+Read Essay →
 
 </a>
 
@@ -211,3 +428,5 @@ Read Article →
 </body>
 
 </html>
+
+
